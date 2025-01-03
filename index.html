@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alchemy Fusion Technologies</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #8b3dff;
+            color: white;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom, #8b3dff, #5e29d1);
+            background-attachment: fixed;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.5em;
+            max-width: 600px;
+            font-weight: 400;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #8b3dff;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 400;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .highlight-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            text-align: left;
+            background-color: #8b3dff;
+        }
+
+        .highlight-section .text {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .highlight-section .text h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .highlight-section .text p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            font-weight: 400;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .highlight-section .gif {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .highlight-section .gif img {
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+        }
+
+        footer p {
+            font-size: 1em;
+            font-weight: 400;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+
+            .section h2 {
+                font-size: 2em;
+            }
+
+            .section p {
+                font-size: 1em;
+            }
+
+            .highlight-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .highlight-section .text {
+                margin-bottom: 20px;
+            }
+
+            .highlight-section .gif img {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>Welcome to Alchemy Fusion Technologies</h1>
+        <p>Where innovation meets excellence. We craft solutions that transform businesses into leaders.</p>
+    </header>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>At Alchemy Fusion Technologies, we specialize in delivering cutting-edge solutions that empower our clients to stay ahead in the digital era. Our expertise spans across various domains, ensuring excellence in every project.</p>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <p>From web development to cloud solutions, we provide a comprehensive range of services designed to meet your unique needs and drive your business forward.</p>
+    </section>
+
+    <section id="highlight" class="highlight-section">
+        <div class="text">
+            <h2>Learn More</h2>
+            <p>24/7 Customer Support</p>
+            <p>Highlight specific services or products that are unique to your business here. It can be your flagship product, or a service that you've pioneered. Give it room to shine here.</p>
+        </div>
+        <div class="gif">
+            <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Highlight Animation">
+        </div>
+    </section>
+
+    <section id="team" class="section">
+        <h2>Our Team</h2>
+        <p>Our team comprises highly skilled professionals dedicated to delivering exceptional results. Together, we bring your vision to life.</p>
+    </section>
+
+    <section id="portfolio" class="section">
+        <h2>Portfolio</h2>
+        <p>Explore our portfolio to see the innovative projects we have delivered for clients across industries.</p>
+    </section>
+
+    <section id="careers" class="section">
+        <h2>Careers</h2>
+        <p>Join our dynamic team and shape the future of technology. We are always on the lookout for talented individuals who share our passion for innovation.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to collaborate? Reach out to us, and let's create something amazing together.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Alchemy Fusion Technologies. All rights reserved.</p>
+    </footer>
+</body>
+</html>
