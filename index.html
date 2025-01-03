@@ -1,276 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alchemy Fusion Technologies</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        scroll-behavior: smooth;
+        background-color: #8b3dff;
+        color: white;
+      }
+      .button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+      .button2 {
+  background-color: black;
+  color: white;
+  border-radius: 5px solid #008CBA;
+}
+      header {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(to bottom, #8b3dff, #5e29d1);
+        background-attachment: fixed;
+      }
+
+      header h1 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        font-weight: 700;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      header p {
+        font-size: 1.5em;
+        max-width: 600px;
+        font-weight: 400;
+        animation: slideIn 2s ease-in-out;
+      }
+
+      .section {
+        padding: 60px 20px;
+        text-align: center;
+        background-color: #8b3dff;
+      }
+
+      .section h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        font-weight: 700;
+        animation: fadeInUp 1.5s ease-in-out;
+      }
+
+      .section p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        font-weight: 400;
+        animation: fadeInUp 2s ease-in-out;
+      }
+
+      .highlight-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 20px;
+        text-align: left;
+        background-color: #8b3dff;
+      }
+
+      .highlight-section .text {
+        flex: 1;
+        min-width: 300px;
+        max-width: 500px;
+        text-align: center;
+      }
+
+      .highlight-section .text h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        font-weight: 700;
+        animation: fadeInUp 1.5s ease-in-out;
+      }
+
+      .highlight-section .text p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        font-weight: 400;
+        animation: fadeInUp 2s ease-in-out;
+      }
+
+      .highlight-section .gif {
+        flex: 1;
+        min-width: 300px;
+        text-align: center;
+      }
+
+      .highlight-section .gif img {
+        width: 100%;
+        max-width: 400px;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      footer {
+        padding: 20px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
+      }
+
+      footer p {
+        font-size: 1em;
+        font-weight: 400;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            scroll-behavior: smooth;
-            background-color: #8b3dff;
-            color: white;
+        to {
+          opacity: 1;
         }
+      }
 
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 10px 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      @keyframes slideIn {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
         }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
 
+      @keyframes fadeInUp {
+        from {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
         nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
+          flex-direction: column;
+          padding: 10px;
         }
 
         nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #f1c40f;
-        }
-
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(to bottom, #8b3dff, #5e29d1);
-            background-attachment: fixed;
+          margin: 10px 0;
         }
 
         header h1 {
-            font-size: 3.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-            animation: fadeIn 2s ease-in-out;
+          font-size: 2.5em;
         }
 
         header p {
-            font-size: 1.5em;
-            max-width: 600px;
-            font-weight: 400;
-            animation: slideIn 2s ease-in-out;
-        }
-
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-            background-color: #8b3dff;
+          font-size: 1.2em;
         }
 
         .section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            font-weight: 700;
-            animation: fadeInUp 1.5s ease-in-out;
+          font-size: 2em;
         }
 
         .section p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            font-weight: 400;
-            animation: fadeInUp 2s ease-in-out;
+          font-size: 1em;
         }
 
         .highlight-section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
-            text-align: left;
-            background-color: #8b3dff;
+          flex-direction: column;
+          text-align: center;
         }
 
         .highlight-section .text {
-            flex: 1;
-            min-width: 300px;
-            max-width: 500px;
-            text-align: center;
-        }
-
-        .highlight-section .text h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            font-weight: 700;
-            animation: fadeInUp 1.5s ease-in-out;
-        }
-
-        .highlight-section .text p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            font-weight: 400;
-            animation: fadeInUp 2s ease-in-out;
-        }
-
-        .highlight-section .gif {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
+          margin-bottom: 20px;
         }
 
         .highlight-section .gif img {
-            width: 100%;
-            max-width: 400px;
-            animation: fadeIn 2s ease-in-out;
+          max-width: 300px;
+        }
+        /* body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        } */
+
+        .container {
+            text-align: center;
+            margin: 50px auto;
+            width: 90%;
+            max-width: 600px;
         }
 
-        footer {
+        .box {
+            background-color: #fff;
             padding: 20px;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.9);
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .box h2 {
+            font-size: 24px;
+            color: #8c49a1;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
             color: white;
         }
 
-        footer p {
-            font-size: 1em;
-            font-weight: 400;
-            animation: fadeIn 2s ease-in-out;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            background: linear-gradient(to right, #243b55, #141e30);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .content {
+            display: flex;
+            align-items: center;
+            background-color: #14213d;
+            border: 1px solid white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
 
-        @keyframes slideIn {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        .text-section {
+            flex: 1;
+            padding: 20px;
         }
 
-        @keyframes fadeInUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        .text-section h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fff;
         }
 
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                padding: 10px;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
-
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            header p {
-                font-size: 1.2em;
-            }
-
-            .section h2 {
-                font-size: 2em;
-            }
-
-            .section p {
-                font-size: 1em;
-            }
-
-            .highlight-section {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .highlight-section .text {
-                margin-bottom: 20px;
-            }
-
-            .highlight-section .gif img {
-                max-width: 300px;
-            }
+        .text-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #ccc;
         }
+
+        .text-section .btn {
+            background-color: #e91e63;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .text-section .btn:hover {
+            background-color: #d81b60;
+        }
+
+        .image-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .image-section img {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border: 8px solid transparent;
+            background-image: linear-gradient(45deg, #2193b0, #6dd5ed);
+        }
+        .social {
+            background: linear-gradient(45deg, #5b1f6c, #260b47);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .social span {
+            font-size: 1.5rem;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .social a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social a:hover {
+            color: #00aced;
+        }
+
+        .social i {
+            font-size: 2rem;
+        }
+      }
+      /* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+/* instagram */
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
     </style>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#careers">Careers</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+  </head>
+  <body>
+   
     </nav>
-
+    <img
+      src="img_girl.jpg"
+      alt="Alchemy  fusion
+    technologies "
+      width="100"
+      height="100"
+    />
     <header id="home">
-        <h1>Welcome to Alchemy Fusion Technologies</h1>
-        <p>Where innovation meets excellence. We craft solutions that transform businesses into leaders.</p>
+      <h1>Always ready to make your life better</h1>
+      <button class="btn" onclick="alert('Button clicked!')">
+      EXPLORE
+    </button>
     </header>
-
+   
+    <div class="container">
+    <div class="box">
+    <h2>PRODUCTS</h2>
+    <a href="#" class="btn">Learn More</a>
+</div>
+    <div class="box">
+        <h2>CUSTOMISED SOLUTIONS</h2>
+        <a href="#" class="btn">Learn More</a>
+    </div>
+    <div class="box">
+        <h2>SUPPORT</h2>
+        <a href="#" class="btn">Learn More</a>
+    </div>
+ 
+</div>
+<div class="container">
+<div class="content">
+    <div class="text-section">
+        <h1>100% SECURED DATA</h1>
+        <p>
+            Highlight specific services or products that are unique to your business here. 
+            It can be your flagship product, or a service that you've pioneered. 
+            Give it room to shine here.
+        </p>
+        <a href="#" class="btn">Learn More</a>
+    </div>
+    <!-- <div class="image-section">
+        <img src="https://via.placeholder.com/250" alt="Secured Data">
+    </div> -->
+</div>
+</div>
+<div class="container">
+<h1>SOME OF OUR SAMPLE PROJECTS</h1>
+<div class="projects">
+  <div class="project">
+    <img src="https://via.placeholder.com/250" alt="Project 1">
+    <p>Give a short description of your project. Share the impact it made.</p>
+  </div>
+  <div class="project">
+    <img src="https://via.placeholder.com/250" alt="Project 2">
+    <p>Give a short description of your project. Share the impact it made.</p>
+  </div>
+</div>
+</div>
     <section id="about" class="section">
-        <h2>About Us</h2>
-        <p>At Alchemy Fusion Technologies, we specialize in delivering cutting-edge solutions that empower our clients to stay ahead in the digital era. Our expertise spans across various domains, ensuring excellence in every project.</p>
+      <h2>About Us</h2>
+      <p>
+        At Alchemy Fusion Technologies, we specialize in delivering cutting-edge
+        solutions that empower our clients to stay ahead in the digital era. Our
+        expertise spans across various domains, ensuring excellence in every
+        project.
+      </p>
     </section>
 
     <section id="services" class="section">
-        <h2>Our Services</h2>
-        <p>From web development to cloud solutions, we provide a comprehensive range of services designed to meet your unique needs and drive your business forward.</p>
+      <h2>Our Services</h2>
+      <p>
+        From web development to cloud solutions, we provide a comprehensive
+        range of services designed to meet your unique needs and drive your
+        business forward.
+      </p>
     </section>
 
     <section id="highlight" class="highlight-section">
-        <div class="text">
-            <h2>Learn More</h2>
-            <p>24/7 Customer Support</p>
-            <p>Highlight specific services or products that are unique to your business here. It can be your flagship product, or a service that you've pioneered. Give it room to shine here.</p>
-        </div>
-        <div class="gif">
-            <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Highlight Animation">
-        </div>
+      <div class="text">
+        <h2>Learn More</h2>
+        <p>24/7 Customer Support</p>
+        <p>
+          Highlight specific services or products that are unique to your
+          business here. It can be your flagship product, or a service that
+          you've pioneered. Give it room to shine here.
+        </p>
+      </div>
+      <div class="gif">
+        <img
+          src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif"
+          alt="Highlight Animation"
+        />
+      </div>
     </section>
 
     <section id="team" class="section">
-        <h2>Our Team</h2>
-        <p>Our team comprises highly skilled professionals dedicated to delivering exceptional results. Together, we bring your vision to life.</p>
+      <h2>Our Team</h2>
+      <p>
+        Our team comprises highly skilled professionals dedicated to delivering
+        exceptional results. Together, we bring your vision to life.
+      </p>
     </section>
 
     <section id="portfolio" class="section">
-        <h2>Portfolio</h2>
-        <p>Explore our portfolio to see the innovative projects we have delivered for clients across industries.</p>
+      <h2>Portfolio</h2>
+      <p>
+        Explore our portfolio to see the innovative projects we have delivered
+        for clients across industries.
+      </p>
     </section>
 
     <section id="careers" class="section">
-        <h2>Careers</h2>
-        <p>Join our dynamic team and shape the future of technology. We are always on the lookout for talented individuals who share our passion for innovation.</p>
+      <h2>Careers</h2>
+      <p>
+        Join our dynamic team and shape the future of technology. We are always
+        on the lookout for talented individuals who share our passion for
+        innovation.
+      </p>
     </section>
 
     <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to collaborate? Reach out to us, and let's create something amazing together.</p>
+      <h2>Let's talk business.</h2>
+      <p>
+        Phone : +91 94490 70247
+        <br />
+        Email : Sales@alchemyfusiontecnologies.com
+      </p>
     </section>
+    <section class="social">
+    <span>SOCIAL</span>
 
+    <a href="#" title="facebook"><i class="fa fa-facebook"></i></a>
+
+    <a href="#" title="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+</section>
     <footer>
-        <p>&copy; 2025 Alchemy Fusion Technologies. All rights reserved.</p>
+      <p>&copy; 2025 Alchemy Fusion Technologies. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
