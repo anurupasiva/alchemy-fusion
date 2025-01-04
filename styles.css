@@ -220,3 +220,74 @@ h1 {
   font-weight: bold;
   color: #FFD700; /* Match the yellow color of the logo */
 }
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1d1e30, #1f2850);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container1{
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid #800080;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .content {
+            max-width: 400px;
+            margin-right: 20px;
+        }
+
+        .content h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .content p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            color: #aaa;
+        }
+
+        .content .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ff00ff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .content .btn:hover {
+            background-color: #e600e6;
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            background: linear-gradient(135deg, #00f, #f0f);
+        }
