@@ -554,6 +554,10 @@ h1 {
     flex-direction: column;
   }
 
+  .container3 img {
+    display: none;
+  }
+
   .contact-section {
     padding: 20px;
   }
