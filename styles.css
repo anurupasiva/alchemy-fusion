@@ -301,10 +301,23 @@ h1 {
   gap: 20px;
   justify-content: space-between;
 }
-
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
 .left-section {
   flex: 1;
   max-width: 500px;
+}
+.left-content {
+    max-width: 50%;
+}
+
+.right-image img {
+    max-width: 400px;
+    height: auto;
 }
 
 .left-section h1 {
