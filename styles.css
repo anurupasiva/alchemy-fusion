@@ -1,21 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
-
-
-/* Define CSS variables for common colors */
+/* Define CSS variables for common colors and font sizes */
 :root {
   --primary-color: #0c284d;
   --secondary-color: #4b0082;
   --text-color: #fffc00;
+  --text-black-color: #000000;
   --accent-color: #ff00ff;
-  --hover-color: #ff69b4;
+  --hover-color: #ffd700; /* A shade of gold that complements yellow and black */
   --light-text-color: #d3d3d3;
-  --box-bg-color:  rgba(0, 0, 0, 0.6);
+  --box-bg-color: rgba(0, 0, 0, 0.6);
   --box-border-color: #4b0082;
   --box-shadow-color: rgba(0, 0, 0, 0.3);
   --testimonial-bg-color: rgba(12, 40, 77, 0.7);
   --testimonial-border-color: rgba(255, 255, 255, 0.5);
+  --font-size-small: 1rem;
+  --font-size-medium: 1.2rem;
+  --font-size-large: 1.5rem;
+  --font-size-xlarge: 2rem;
+  --font-size-xxlarge: 2.5rem;
+  --font-size-xxxlarge: 4rem;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +29,9 @@
 }
 
 hr {
-  margin: 60px 0;
+  border: 1;
+  height: 1px;
+  margin: 30px 0;
 }
 
 body {
@@ -32,7 +40,6 @@ body {
   color: var(--text-color);
   justify-content: center;
   align-items: center;
-  height: 100vh;
   padding: 20px;
 }
 
@@ -42,19 +49,42 @@ header {
   text-align: left;
   overflow: hidden;
   padding-top: 5%;
+  align-content: center;
   max-height: 500px;
 }
 
 header h1 {
-  font-size: 4em;
+  font-size: var(--font-size-xxxlarge);
   margin-bottom: 10px;
   animation: fadeIn 2s ease-in-out;
+}
+
+header p {
+  font-size: var(--font-size-small);
+  color: var(--light-text-color);
+}
+
+header h3 {
+  font-size: var(--font-size-xlarge);
+  margin-bottom: 10px;
 }
 
 .header-img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header-content2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content2 p {
+  font-size: var(--font-size-medium);
+  color: var(--light-text-color);
 }
 
 .btn {
@@ -64,8 +94,8 @@ header h1 {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: var(--font-size-small);
+  margin-top: 20px;
   transition-duration: 0.4s;
   cursor: pointer;
   background-color: black;
@@ -74,7 +104,7 @@ header h1 {
 
 .btn:hover {
   background-color: var(--hover-color);
-  color: var(--text-color);
+  color: var(--text-black-color);
 }
 
 .container {
@@ -82,18 +112,20 @@ header h1 {
   text-align: center;
 }
 
-.about-section h2{
-  font-size: 1.2rem;
+.about-section h2 {
+  text-align: center;
+  font-size: var(--font-size-xlarge);
   color: var(--text-color);
 }
 
-.about-section p{
-  font-size: 1.2rem;
+.about-section p {
+  margin-top: 20px;
+  font-size: var(--font-size-medium);
   color: var(--light-text-color);
 }
 
 .container h1 {
-  font-size: 2.5rem;
+  font-size: var(--font-size-xxlarge);
   margin-bottom: 30px;
   font-weight: bold;
 }
@@ -111,31 +143,26 @@ header h1 {
 }
 
 .box h2 {
-  font-size: 24px;
+  font-size: var(--font-size-large);
   color: var(--text-color);
   margin-bottom: 20px;
 }
 
 .highlight-section {
-  justify-content: space-evenly;
-  gap: 100px;
-  display: flex;
+  text-align: center;
   max-height: 500px;
   width: 100%;
-  max-height: 40%;
   overflow: hidden;
 }
 
 .highlight-section .text {
-  flex: 1;
-  min-width: 300px;
-  max-width: 900px;
   text-align: center;
 }
 
-.highlight-section .text p{
-  font-size: 1.2rem;
+.highlight-section .text p {
+  font-size: var(--font-size-medium);
   color: var(--light-text-color);
+  margin-top: 10px;
 }
 
 .highlight-img {
@@ -199,7 +226,7 @@ main {
 
 h1 {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: var(--font-size-large);
 }
 
 .projects {
@@ -229,7 +256,7 @@ h1 {
 }
 
 .project-content p {
-  font-size: 1rem;
+  font-size: var(--font-size-small);
   color: var(--light-text-color);
 }
 
@@ -239,20 +266,20 @@ h1 {
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   margin-right: 10px;
   border-radius: 50%;
 }
 
 .logo-text {
-  font-size: 1rem;
+  font-size: var(--font-size-large);
   font-weight: bold;
   color: var(--text-color);
 }
 
 .container1 {
-  display: flex;
+  text-align: center;
   align-items: center;
   padding: 20px;
   border: 2px solid var(--secondary-color);
@@ -266,33 +293,16 @@ h1 {
 }
 
 .content h1 {
-  font-size: 2rem;
+  font-size: var(--font-size-xlarge);
   margin-bottom: 15px;
   color: var(--text-color);
 }
 
 .content p {
-  font-size: 1rem;
+  font-size: var(--font-size-small);
   margin-bottom: 20px;
   line-height: 1.5;
   color: var(--light-text-color);
-}
-
-.content .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: var(--text-color);
-  background-color: var(--accent-color);
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.content .btn:hover {
-  background-color: #e600e6;
 }
 
 .image-container {
@@ -300,11 +310,11 @@ h1 {
 }
 
 .image-container img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   border: 5px solid transparent;
-  background: linear-gradient(135deg, #00f, #f0f);
+  /* background: linear-gradient(135deg, #00f, #f0f); */
 }
 
 .container3 {
@@ -315,43 +325,47 @@ h1 {
   gap: 20px;
   justify-content: space-between;
 }
+
 .intro-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
 }
+
 .left-section {
   flex: 1;
   max-width: 500px;
 }
+
 .left-content {
-    max-width: 50%;
+  max-width: 50%;
 }
+
 .subheading {
-    font-size: 1.5rem;
-    color: #ff00ff;
-    margin-bottom: 10px;
+  font-size: var(--font-size-large);
+  color: var(--accent-color);
+  margin-bottom: 10px;
 }
 
 .description {
-    font-size: 1.1rem;
-    color: #dddddd;
+  font-size: var(--font-size-medium);
+  color: #dddddd;
 }
 
 .right-image img {
-    max-width: 400px;
-    height: auto;
+  max-width: 400px;
+  height: auto;
 }
 
 .left-section h1 {
-  font-size: 2.5rem;
+  font-size: var(--font-size-xxlarge);
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .left-section img {
-  width: 100%;
+  width: 60%;
   height: auto;
 }
 
@@ -372,7 +386,7 @@ h1 {
 }
 
 .testimonial-box p {
-  font-size: 1rem;
+  font-size: var(--font-size-small);
   color: var(--light-text-color);
   margin-bottom: 10px;
 }
@@ -394,13 +408,14 @@ h1 {
 }
 
 .contact-details p {
-  margin-bottom: 10px;
-  font-size: 1rem;
+  margin-top: 20px;
+  font-size: var(--font-size-small);
   line-height: 1.5;
+  color: var(--light-text-color);
 }
 
 .contact-details strong {
-  font-size: 1.1rem;
+  font-size: var(--font-size-medium);
   color: var(--accent-color);
 }
 
@@ -409,15 +424,15 @@ h1 {
 }
 
 .social-media p {
-  font-size: 1.1rem;
+  font-size: var(--font-size-medium);
   margin-bottom: 10px;
   color: var(--accent-color);
 }
 
 .social-icons a {
   margin-right: 15px;
-  font-size: 1.5rem;
-  color: var(--text-color);
+  font-size: var(--font-size-large);
+  color: var(--light-text-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -427,6 +442,60 @@ h1 {
 }
 
 .decorative-image img {
-  max-width: 200px;
+  max-width: 350px;
   height: auto;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: var(--font-size-xlarge);
+  }
+
+  .container h1 {
+    font-size: var(--font-size-xlarge);
+  }
+
+  .box h2 {
+    font-size: var(--font-size-large);
+  }
+
+  .highlight-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .projects {
+    flex-direction: column;
+  }
+
+  .container3 {
+    flex-direction: column;
+  }
+
+  .contact-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: var(--font-size-large);
+  }
+
+  .container h1 {
+    font-size: var(--font-size-large);
+  }
+
+  .box h2 {
+    font-size: var(--font-size-medium);
+  }
+
+  .highlight-section .text p {
+    font-size: var(--font-size-small);
+  }
+
+  .contact-section {
+    padding: 10px;
+  }
 }
