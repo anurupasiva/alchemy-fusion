@@ -314,6 +314,16 @@ h1 {
 .left-content {
     max-width: 50%;
 }
+.subheading {
+    font-size: 1.5rem;
+    color: #ff00ff;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #dddddd;
+}
 
 .right-image img {
     max-width: 400px;
