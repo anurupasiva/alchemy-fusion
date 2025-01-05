@@ -18,14 +18,14 @@ body {
   padding: 20px;
 }
 
+
 header {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
   text-align: left;
   overflow: hidden;
   padding-top: 5%;
-  /* max-height: 500px; */
+  max-height: 500px;
 }
 
 header h1 {
@@ -33,7 +33,23 @@ header h1 {
   margin-bottom: 10px;
   animation: fadeIn 2s ease-in-out;
 }
+.header-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+
+/* .header-content {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+} */
+
+/* .header-content div {
+  flex: 1;
+  text-align: center;
+} */
 
 .btn {
   border: none;
@@ -200,14 +216,14 @@ h1 {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   margin-right: 10px;
   border-radius: 50%;
 }
 
 .logo-text {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #ffffff;
 }
@@ -299,6 +315,9 @@ h1 {
 .right-section {
   flex: 1;
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .testimonial-box {
