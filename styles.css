@@ -108,6 +108,8 @@ header h1 {
 }
 
 .highlight-section {
+  justify-content: space-evenly;
+  gap: 100px;
   display: flex;
   max-height: 500px;
   width: 100%;
@@ -345,11 +347,13 @@ h1 {
 
 .contact-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   background: rgba(0, 0, 0, 0.9);
-  padding: 20px; /* Add padding for margin space */
+  padding: 70px;
+  gap: 200px;
+  color: var(--text-color);
 }
 
 .contact-details p {
@@ -386,6 +390,6 @@ h1 {
 }
 
 .decorative-image img {
-  max-width: 300px;
+  max-width: 200px;
   height: auto;
 }
