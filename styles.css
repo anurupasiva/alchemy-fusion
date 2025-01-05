@@ -4,19 +4,18 @@
 
 /* Define CSS variables for common colors */
 :root {
-  --primary-color: #8b3dff;
-  --secondary-color: #800080;
-  --text-color: #fff;
+  --primary-color: #0c284d;
+  --secondary-color: #4b0082;
+  --text-color: #fffc00;
   --accent-color: #ff00ff;
-  --hover-color: #45a049;
-  --light-text-color: #aaa;
-  --box-bg-color: rgba(0, 0, 0, 0.6);
-  --box-border-color: #ddd;
-  --box-shadow-color: rgba(0, 0, 0, 0.1);
-  --testimonial-bg-color: rgba(0, 0, 0, 0.5);
-  --testimonial-border-color: rgba(255, 255, 255, 0.3);
+  --hover-color: #ff69b4;
+  --light-text-color: #d3d3d3;
+  --box-bg-color:  rgba(0, 0, 0, 0.6);
+  --box-border-color: #4b0082;
+  --box-shadow-color: rgba(0, 0, 0, 0.3);
+  --testimonial-bg-color: rgba(12, 40, 77, 0.7);
+  --testimonial-border-color: rgba(255, 255, 255, 0.5);
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -83,6 +82,16 @@ header h1 {
   text-align: center;
 }
 
+.about-section h2{
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.about-section p{
+  font-size: 1.2rem;
+  color: var(--light-text-color);
+}
+
 .container h1 {
   font-size: 2.5rem;
   margin-bottom: 30px;
@@ -122,6 +131,11 @@ header h1 {
   min-width: 300px;
   max-width: 900px;
   text-align: center;
+}
+
+.highlight-section .text p{
+  font-size: 1.2rem;
+  color: var(--light-text-color);
 }
 
 .highlight-img {
