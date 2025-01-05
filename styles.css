@@ -88,41 +88,27 @@ header h1 {
 
 .highlight-section {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  max-height: 500px;
+  width: 100%;
   padding: 60px 20px;
-  text-align: left;
-  background-color: #8b3dff;
   overflow: hidden;
 }
 
 .highlight-section .text {
   flex: 1;
   min-width: 300px;
-  max-width: 500px;
+  max-width: 900px;
   text-align: center;
 }
 
-.gif-container {
-  width: 100%; /* Or set a specific width like 300px */
-  height: auto; /* Allows the div's height to adjust dynamically */
-  max-width: 500px; /* Optional: Restrict maximum width */
-  overflow: hidden; /* Ensures the image does not overflow the container */
+.responsive-gif {
+  width: auto;
+  /* Maintain the aspect ratio of the GIF */
+  height: 100%;
+  /* Automatically adjust the height to match the div */
+  object-fit: contain;
+  /* Ensures the GIF is resized to fit within the container without being cropped */
 }
-
-.gif-container img {
-  width: 100%; /* Image will take the full width of the container */
-  height: auto; /* Keeps the image's aspect ratio */
-  display: block; /* Avoids extra space below the image */
-  object-fit: contain; /* Ensures the entire image is visible within the container */
-}
-
-/* .highlight-section .gif img {
-  width: 100%;
-  max-width: 400px;
-  animation: fadeIn 2s ease-in-out;
-} */
 
 footer {
   padding: 20px;
@@ -238,7 +224,8 @@ h1 {
 .content {
   /* max-width: 400px; */
   margin-right: 20px;
-  overflow: hidden; /* Prevents image from overflowing */
+  overflow: hidden;
+  /* Prevents image from overflowing */
 
 }
 
@@ -286,7 +273,7 @@ h1 {
 
 .container3 {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 5% auto;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
