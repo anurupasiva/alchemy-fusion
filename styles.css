@@ -460,7 +460,12 @@ h1 {
   line-height: 1.5;
   color: var(--light-text-color);
 }
-
+.contact-content {
+  /* max-width: 600px; */
+  /* overflow: hidden; */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .contact-details strong {
   font-size: var(--font-size-medium);
   color: var(--accent-color);
