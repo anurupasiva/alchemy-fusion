@@ -565,6 +565,7 @@ h1 {
 
   .contact-section {
     padding: 20px;
+    gap: none
   }
 
   .contact-section img {
