@@ -528,7 +528,7 @@ hr {
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-width: 768px) {
   body {
     margin: 0;
   }
@@ -561,7 +561,7 @@ hr {
   }
 
   .container {
-    display: block;
+    display: flex;
     flex-direction: column;
     overflow: scroll;
   }
@@ -609,9 +609,9 @@ hr {
     font-size: var(--font-size-extra-small);
   }
 }
-/* 
+
 @media only screen and (max-width: 768px) and (orientation: landscape) {
   #products.container{
     display: block
   }
-} */
+}
