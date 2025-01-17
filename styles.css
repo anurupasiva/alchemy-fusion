@@ -481,6 +481,9 @@ h1 {
   margin-bottom: 10px;
   color: var(--accent-color);
 }
+.social-icons{
+  margin-top: 20px;
+}
 
 .social-icons a {
   margin-right: 15px;
@@ -639,6 +642,10 @@ hr {
 
   .contact-section p {
     font-size: var(--font-size-extra-small);
+  }
+
+  footer {
+    font-size: var(--font-size-extra-extra-small);
   }
 }
 
