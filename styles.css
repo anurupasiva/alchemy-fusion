@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 /* Define CSS variables for common colors and font sizes */
+
+/* Hide scrollbar but keep it functional */
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 :root {
   --primary-color: #0c284d;
   --secondary-color: #4b0082;
@@ -595,6 +606,10 @@ hr {
   .projects,
   .container3 {
     flex-direction: column;
+  }
+
+  .left-section h1 {
+    font-size: var(--font-size-medium);
   }
 
   .container3 img {
