@@ -9,9 +9,12 @@ body::-webkit-scrollbar {
 }
 
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
+
 :root {
   --primary-color: #0c284d;
   --secondary-color: #4b0082;
@@ -299,6 +302,7 @@ h1 {
   font-weight: bold;
   color: var(--text-color);
 }
+
 .container1 {
   text-align: center;
   align-items: center;
@@ -405,6 +409,7 @@ h1 {
   font-size: var(--font-size-xxlarge);
   margin-bottom: 20px;
   line-height: 1.2;
+  text-align: center;
 }
 
 .left-section img {
@@ -548,7 +553,9 @@ hr {
   .logo-text {
     font-size: var(--font-size-small);
   }
-  
+  h1 {
+    font-size: var(--font-size-medium);
+  }
 
   header h1 {
     font-size: var(--font-size-medium);
@@ -581,6 +588,10 @@ hr {
     display: flex;
     flex-direction: column;
     overflow: scroll;
+  }
+
+  .about-section h2 {
+    font-size: var(--font-size-medium);
   }
 
   .container img {
@@ -630,9 +641,14 @@ hr {
     font-size: var(--font-size-extra-small);
   }
 }
-/* 
-@media only screen and (max-width: 768px) and (orientation: landscape) {
-  #products.container{
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  /* #products.container{
     display: block
+  } */
+
+  body {
+    margin-left: 50px;
+    margin-right: 50px;
   }
-} */
+}
