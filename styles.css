@@ -533,8 +533,13 @@ hr {
     margin: 0;
   }
 
+  .logo-text {
+    font-size: var(--font-size-small);
+  }
+  
+
   header h1 {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
   }
 
   .header-content2 p {
@@ -575,7 +580,7 @@ hr {
   }
 
   .container h1 {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
   }
 
   .box h2 {
